@@ -53,3 +53,5 @@ combine:
 
 	echo "Unmounting 0s"
 	sudo kpartx -d build/0s.img
+	sudo kpartx -d /dev/loop0
+	sudo losetup -d /dev/loop0
