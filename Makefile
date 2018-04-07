@@ -8,6 +8,8 @@ setup:
 build: 
 	set -e
 
+	mkdir -p build
+
 	cd scripts
 
 	./setup-root-fs.sh

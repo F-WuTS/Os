@@ -2,7 +2,6 @@
 
 set -e
 
-mkdir -p ../build
 cd ../build
 
 [[ -d wallaby-linux ]] || git clone https://github.com/F-WuTS/wallaby-linux.git --depth=1

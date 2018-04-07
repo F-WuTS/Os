@@ -1,7 +1,6 @@
 #!/bin/bash
 set -e
 
-mkdir -p ../build
 cd ../build
 
 if [ "$EUID" -ne 0 ]; then
