@@ -1,0 +1,10 @@
+[Unit]
+Description=Reset Coprocessor
+After=systemd-user-sessions.service
+
+[Service]
+RemainAfterExit=yes
+ExecStart=/usr/bin/wallaby_reset_coproc
+
+[Install]
+WantedBy=multi-user.target

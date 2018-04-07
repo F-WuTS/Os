@@ -1,0 +1,10 @@
+[Unit]
+Description=Setup sound
+After=systemd-user-sessions.service
+
+[Service]
+ExecStartPre=/usr/sbin/alsactl --file /var/asound.state restore 
+ExecStart=/usr/bin/amixer set PCM 100%
+
+[Install]
+WantedBy=multi-user.target

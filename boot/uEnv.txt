@@ -1,0 +1,3 @@
+console="tty0 console=ttyO0,115200n8"
+uenvcmd=set optargs "consoleblank=0 fbcon=rotate:2"
+

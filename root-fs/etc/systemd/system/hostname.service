@@ -1,0 +1,9 @@
+[Unit]
+Description=Automatically change hostname to Wallaby hardware ID
+After=x11.service
+
+[Service]
+ExecStart=/usr/bin/wallaby_set_hostname.py
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,13 @@
+#!/bin/bash 
+
+if [ ! -d "/sys/class/gpio/gpio34" ]; then
+    echo "gpio34 missing - initializing gpio pins"
+    wallaby_init_gpio
+fi
+
+echo "resetting co processor..."
+echo 1 > /sys/class/gpio/gpio34/value
+echo 0 > /sys/class/gpio/gpio34/value
+echo 1 > /sys/class/gpio/gpio34/value
+
+echo "Done..."

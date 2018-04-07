@@ -1,0 +1,10 @@
+[Unit]
+After=multi-user.target
+
+[Service]
+ExecStart=/usr/bin/node /var/0s/source/harrogate/server.js
+WorkingDirectory=/var/0s/source/harrogate
+
+
+[Install]
+WantedBy=multi-user.target

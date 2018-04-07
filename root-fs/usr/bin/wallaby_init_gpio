@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo 33 > /sys/class/gpio/export
+echo 34 > /sys/class/gpio/export
+
+echo "out" > /sys/class/gpio/gpio33/direction
+echo "out" > /sys/class/gpio/gpio34/direction
