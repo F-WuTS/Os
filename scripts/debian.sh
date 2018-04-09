@@ -15,7 +15,8 @@ if [ ! -d debian-fresh ]; then
 	debootstrap --foreign --verbose --arch=armhf stretch ./debian-fresh
 	mkdir -p debian-fresh/usr/bin
 	cp /usr/bin/qemu-arm-static debian-fresh/usr/bin
-	# Stage 1
+	
+	echo "Stage 1"
 	cp ../chroot/stage-1.sh debian-fresh
 	chroot debian-fresh/ ./stage-1.sh
 	rm debian-fresh/stage-1.sh
@@ -27,15 +28,13 @@ cp -r debian-fresh debian
 
 cp -r ../chroot debian
 
-# Stage 2
-echo "Installing dependencies."
+echo "Stage 2"
 chroot debian/ ./chroot/stage-2.sh
 
 echo "Applying overlay fs"
 cp -r ../root-fs/* debian
 
-# Stage 3
-echo "Running fs prepare"
+echo "Stage 3"
 chroot debian/ ./chroot/stage-3.sh
 
 rm -rf debian/chroot
