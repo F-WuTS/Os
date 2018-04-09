@@ -4,6 +4,9 @@ mkdir -p root-fs/var/0s/source
 
 cd root-fs/var/0s/source
 
+# Make sure that git lfs is installed, otherwise only lfs pointers will be downloaded
+git lfs install
+
 if [ ! -d c0re ]; then
 	git clone https://github.com/F-WuTS/c0re.git --recursive --depth=1
 else
