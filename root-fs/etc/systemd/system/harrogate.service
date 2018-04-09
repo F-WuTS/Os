@@ -4,7 +4,10 @@ After=multi-user.target
 [Service]
 ExecStart=/usr/bin/node /var/0s/source/harrogate/server.js
 WorkingDirectory=/var/0s/source/harrogate
-
+# Explicitly state root as user to ensure that HOME is set
+User=root
+Restart=always
+RestartSec=3
 
 [Install]
 WantedBy=multi-user.target
