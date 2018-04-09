@@ -1,11 +1,12 @@
 [Unit]
-After=systemd-user-sessions.service
+After=multi-user.service
 
 [Service]
 ExecStart=/usr/bin/python3 /var/0s/source/c0re/app.py
 WorkingDirectory=/var/0s/source/c0re
 Environment="PYTHONIOENCODING=UTF-8"
-
+Restart=always
+RestartSec=3
 
 [Install]
 WantedBy=multi-user.target
