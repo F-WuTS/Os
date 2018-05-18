@@ -24,7 +24,7 @@ make build
 * [sfdisk](https://linux.die.net/man/8/sfdisk) was upgraded quite some time ago and its user interface changed significantly. Current versions do not provide all required flags to successfully create a working image, therefor an old version is used.
 
 * Corrupt files?  
-	`git lfs install`
+	`git lfs install && git lfs pull`
 
 * Running out of disk space?  
 	I'd recommend at least `20GB` of spare storage.
